@@ -11,7 +11,7 @@ const forecast = (latitude,longitude,callback) => {
         } if (response.body.error) {
                 callback(response.body.error,undefined)
         } else {
-            const forecast = '  ' +response.body.current.weather_descriptions[0]+ ',current temperature ' +response.body.current.temperature+ ' and feelslike ' +response.body.current.feelslike
+            const forecast = 'date & Time: ' +response.body.location.localtime + ',   ' +response.body.current.weather_descriptions[0]+ ',current temperature ' +response.body.current.temperature+ ' and feelslike ' +response.body.current.feelslike
              
             callback(undefined,{
                 error: undefined,
